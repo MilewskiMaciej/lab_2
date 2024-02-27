@@ -28,6 +28,14 @@ import sys
 #    else:
 #        print('Podane slowo nie jest palindromem')
 
+#def zad4():
+#    li_pierw = int(input('Podaj liczbe: '))
+#    if li_pierw == 1 && li_pierw == 0:
+#        print('Nie jest to liczba pierwsza')
+#    elif li_pierw == 2:
+#        print('Jest to liczba pierwsza')
+
+
 #def zad7():
 #    dz_liczby = []
 #    licznik = 0
