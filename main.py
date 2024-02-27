@@ -37,7 +37,8 @@ import sys
 #    print(licznik)
 #    licznik += 1
 
-lista = [1,2,3,4,5,7,2,3]
-x = int(input('Podaj liczbe: '))
-if (x**x in lista):
-    print('Znalezioned')
+#lista = [1,2,3,4,5,7,2,3]
+#x = int(input('Podaj liczbe: '))
+#for i in lista:
+#    if x**x == i:
+#        print('Znalezioned')
