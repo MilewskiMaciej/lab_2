@@ -37,8 +37,9 @@ import sys
 
 def zad6():
     li_cal = []
-    licz_cal = float(input('Podaj liczbe calkowita: '))
-    while licz_cal:
+    c = int(input('Podaj ilosc liczb calkowitych: '))
+    for l in range(c):
+        licz_cal = float(input('Podaj liczbe calkowita: '))
         li_cal.append(licz_cal**2)
     print(li_cal)
 
