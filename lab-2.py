@@ -30,10 +30,16 @@ import sys
 
 #def zad4():
 #    li_pierw = int(input('Podaj liczbe: '))
-#    if li_pierw == 1 && li_pierw == 0:
+#    if li_pierw == 1 or li_pierw == 0:
 #        print('Nie jest to liczba pierwsza')
-#    elif li_pierw == 2:
-#        print('Jest to liczba pierwsza')
+#    else:
+#        for m in range(2, li_pierw):
+#            if li_pierw % m == 0:
+#                print('Nie jest to liczba pierwsza')
+#                break
+#            else:
+#                print('Jest to liczba pierwsza')
+#                break
 
 #def zad6():
 #    li_cal = []
@@ -59,6 +65,7 @@ def main():
 #    zad1()
 #    zad2()
 #    zad3()
+#    zad4()
 #    zad6()
 #    zad7()
 main()
