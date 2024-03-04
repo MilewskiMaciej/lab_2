@@ -1,4 +1,3 @@
-"""
 import sys
 
 def zad1():
@@ -81,4 +80,3 @@ def main():
     zad6()
     zad7()
 main()
-"""
