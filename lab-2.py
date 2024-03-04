@@ -35,13 +35,13 @@ import sys
 #    elif li_pierw == 2:
 #        print('Jest to liczba pierwsza')
 
-def zad6():
-    li_cal = []
-    c = int(input('Podaj ilosc liczb calkowitych: '))
-    for l in range(c):
-        licz_cal = float(input('Podaj liczbe calkowita: '))
-        li_cal.append(licz_cal**2)
-    print(li_cal)
+#def zad6():
+#    li_cal = []
+#    c = int(input('Podaj ilosc liczb calkowitych: '))
+#    for l in range(c):
+#        licz_cal = float(input('Podaj liczbe calkowita: '))
+#        li_cal.append(licz_cal**2)
+#    print(li_cal)
 
 
 
@@ -59,6 +59,6 @@ def main():
 #    zad1()
 #    zad2()
 #    zad3()
-    zad6()
+#    zad6()
 #    zad7()
 main()
