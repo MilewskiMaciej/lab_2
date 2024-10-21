@@ -36,6 +36,9 @@
             buttonInsertionSort = new Button();
             buttonMergeSort = new Button();
             buttonQuickSort = new Button();
+            buttonAdd = new Button();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // textBoxInput
@@ -108,11 +111,42 @@
             buttonQuickSort.Text = "QUICK";
             buttonQuickSort.UseVisualStyleBackColor = true;
             // 
+            // buttonAdd
+            // 
+            buttonAdd.Location = new Point(132, 43);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(94, 29);
+            buttonAdd.TabIndex = 8;
+            buttonAdd.Text = "ADD";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(176, 87);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 9;
+            label1.Text = "label1";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(176, 107);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 10;
+            label2.Text = "label2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(buttonAdd);
             Controls.Add(buttonQuickSort);
             Controls.Add(buttonMergeSort);
             Controls.Add(buttonInsertionSort);
@@ -137,5 +171,8 @@
         private Button buttonInsertionSort;
         private Button buttonMergeSort;
         private Button buttonQuickSort;
+        private Button buttonAdd;
+        private Label label1;
+        private Label label2;
     }
 }

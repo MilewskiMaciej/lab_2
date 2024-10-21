@@ -210,6 +210,7 @@ namespace SortingApp
             int[] array = GetArrayFromInput();
             BubbleSort(array);
             DisplayArray(array);
+            label2.Text = "Posortowana tablica: [" + string.Join(", ", array) + "]";
         }
 
         // Wywo³anie Quick Sort
@@ -250,6 +251,14 @@ namespace SortingApp
             int[] array = GetArrayFromInput();
             SelectionSort(array);
             DisplayArray(array);
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            string input = textBoxInput.Text;
+            string[] tokens = input.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+            int[] array = tokens.Select(int.Parse).ToArray();
+            label1.Text = "Tablica: " + string.Join(", ", array);
         }
     }
 }
