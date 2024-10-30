@@ -28,133 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
+            buttonBubbleSort = new Button();
             textBoxInput = new TextBox();
             listBoxResults = new ListBox();
-            buttonSelectionSort = new Button();
-            buttonBubbleSort = new Button();
-            buttonCountingSort = new Button();
-            buttonInsertionSort = new Button();
-            buttonMergeSort = new Button();
             buttonQuickSort = new Button();
-            buttonAdd = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            buttonMergeSort = new Button();
+            buttonInsertionSort = new Button();
+            buttonCountingSort = new Button();
+            buttonSelectionSort = new Button();
             SuspendLayout();
+            // 
+            // buttonBubbleSort
+            // 
+            buttonBubbleSort.Location = new Point(12, 45);
+            buttonBubbleSort.Name = "buttonBubbleSort";
+            buttonBubbleSort.Size = new Size(94, 29);
+            buttonBubbleSort.TabIndex = 0;
+            buttonBubbleSort.Text = "BubbleSort";
+            buttonBubbleSort.UseVisualStyleBackColor = true;
+            buttonBubbleSort.Click += buttonBubbleSort_Click;
             // 
             // textBoxInput
             // 
-            textBoxInput.Location = new Point(20, 45);
+            textBoxInput.Location = new Point(12, 12);
             textBoxInput.Name = "textBoxInput";
-            textBoxInput.Size = new Size(35, 27);
-            textBoxInput.TabIndex = 0;
+            textBoxInput.Size = new Size(125, 27);
+            textBoxInput.TabIndex = 1;
             // 
             // listBoxResults
             // 
             listBoxResults.FormattingEnabled = true;
             listBoxResults.ItemHeight = 20;
-            listBoxResults.Location = new Point(20, 87);
+            listBoxResults.Location = new Point(12, 80);
             listBoxResults.Name = "listBoxResults";
             listBoxResults.Size = new Size(150, 104);
-            listBoxResults.TabIndex = 1;
-            // 
-            // buttonSelectionSort
-            // 
-            buttonSelectionSort.Location = new Point(20, 210);
-            buttonSelectionSort.Name = "buttonSelectionSort";
-            buttonSelectionSort.Size = new Size(94, 29);
-            buttonSelectionSort.TabIndex = 2;
-            buttonSelectionSort.Text = "SELECTION";
-            buttonSelectionSort.UseVisualStyleBackColor = true;
-            // 
-            // buttonBubbleSort
-            // 
-            buttonBubbleSort.Location = new Point(21, 392);
-            buttonBubbleSort.Name = "buttonBubbleSort";
-            buttonBubbleSort.Size = new Size(93, 28);
-            buttonBubbleSort.TabIndex = 3;
-            buttonBubbleSort.Text = "BUBBLE";
-            buttonBubbleSort.UseVisualStyleBackColor = true;
-            // 
-            // buttonCountingSort
-            // 
-            buttonCountingSort.Location = new Point(20, 245);
-            buttonCountingSort.Name = "buttonCountingSort";
-            buttonCountingSort.Size = new Size(94, 29);
-            buttonCountingSort.TabIndex = 4;
-            buttonCountingSort.Text = "COUNTING";
-            buttonCountingSort.UseVisualStyleBackColor = true;
-            // 
-            // buttonInsertionSort
-            // 
-            buttonInsertionSort.Location = new Point(20, 280);
-            buttonInsertionSort.Name = "buttonInsertionSort";
-            buttonInsertionSort.Size = new Size(94, 29);
-            buttonInsertionSort.TabIndex = 5;
-            buttonInsertionSort.Text = "INSERTION";
-            buttonInsertionSort.UseVisualStyleBackColor = true;
-            // 
-            // buttonMergeSort
-            // 
-            buttonMergeSort.Location = new Point(20, 322);
-            buttonMergeSort.Name = "buttonMergeSort";
-            buttonMergeSort.Size = new Size(94, 29);
-            buttonMergeSort.TabIndex = 6;
-            buttonMergeSort.Text = "MERGE";
-            buttonMergeSort.UseVisualStyleBackColor = true;
+            listBoxResults.TabIndex = 2;
             // 
             // buttonQuickSort
             // 
-            buttonQuickSort.Location = new Point(20, 357);
+            buttonQuickSort.Location = new Point(112, 45);
             buttonQuickSort.Name = "buttonQuickSort";
             buttonQuickSort.Size = new Size(94, 29);
-            buttonQuickSort.TabIndex = 7;
-            buttonQuickSort.Text = "QUICK";
+            buttonQuickSort.TabIndex = 3;
+            buttonQuickSort.Text = "QuickSort";
             buttonQuickSort.UseVisualStyleBackColor = true;
+            buttonQuickSort.Click += buttonQuickSort_Click;
             // 
-            // buttonAdd
+            // buttonMergeSort
             // 
-            buttonAdd.Location = new Point(132, 43);
-            buttonAdd.Name = "buttonAdd";
-            buttonAdd.Size = new Size(94, 29);
-            buttonAdd.TabIndex = 8;
-            buttonAdd.Text = "ADD";
-            buttonAdd.UseVisualStyleBackColor = true;
-            buttonAdd.Click += buttonAdd_Click;
+            buttonMergeSort.Location = new Point(212, 45);
+            buttonMergeSort.Name = "buttonMergeSort";
+            buttonMergeSort.Size = new Size(94, 29);
+            buttonMergeSort.TabIndex = 4;
+            buttonMergeSort.Text = "MergeSort";
+            buttonMergeSort.UseVisualStyleBackColor = true;
+            buttonMergeSort.Click += buttonMergeSort_Click;
             // 
-            // label1
+            // buttonInsertionSort
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(176, 87);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 9;
-            label1.Text = "label1";
+            buttonInsertionSort.Location = new Point(312, 45);
+            buttonInsertionSort.Name = "buttonInsertionSort";
+            buttonInsertionSort.Size = new Size(94, 29);
+            buttonInsertionSort.TabIndex = 5;
+            buttonInsertionSort.Text = "Insertion";
+            buttonInsertionSort.UseVisualStyleBackColor = true;
+            buttonInsertionSort.Click += buttonInsertionSort_Click;
             // 
-            // label2
+            // buttonCountingSort
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(176, 107);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 10;
-            label2.Text = "label2";
+            buttonCountingSort.Location = new Point(412, 45);
+            buttonCountingSort.Name = "buttonCountingSort";
+            buttonCountingSort.Size = new Size(94, 29);
+            buttonCountingSort.TabIndex = 6;
+            buttonCountingSort.Text = "Counting";
+            buttonCountingSort.UseVisualStyleBackColor = true;
+            buttonCountingSort.Click += buttonCountingSort_Click;
+            // 
+            // buttonSelectionSort
+            // 
+            buttonSelectionSort.Location = new Point(512, 45);
+            buttonSelectionSort.Name = "buttonSelectionSort";
+            buttonSelectionSort.Size = new Size(94, 29);
+            buttonSelectionSort.TabIndex = 7;
+            buttonSelectionSort.Text = "Selection";
+            buttonSelectionSort.UseVisualStyleBackColor = true;
+            buttonSelectionSort.Click += buttonSelectionSort_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(buttonAdd);
-            Controls.Add(buttonQuickSort);
-            Controls.Add(buttonMergeSort);
-            Controls.Add(buttonInsertionSort);
-            Controls.Add(buttonCountingSort);
-            Controls.Add(buttonBubbleSort);
             Controls.Add(buttonSelectionSort);
+            Controls.Add(buttonCountingSort);
+            Controls.Add(buttonInsertionSort);
+            Controls.Add(buttonMergeSort);
+            Controls.Add(buttonQuickSort);
             Controls.Add(listBoxResults);
             Controls.Add(textBoxInput);
+            Controls.Add(buttonBubbleSort);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -163,16 +135,13 @@
 
         #endregion
 
+        private Button buttonBubbleSort;
         private TextBox textBoxInput;
         private ListBox listBoxResults;
-        private Button buttonSelectionSort;
-        private Button buttonBubbleSort;
-        private Button buttonCountingSort;
-        private Button buttonInsertionSort;
-        private Button buttonMergeSort;
         private Button buttonQuickSort;
-        private Button buttonAdd;
-        private Label label1;
-        private Label label2;
+        private Button buttonMergeSort;
+        private Button buttonInsertionSort;
+        private Button buttonCountingSort;
+        private Button buttonSelectionSort;
     }
 }

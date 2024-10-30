@@ -1,7 +1,3 @@
-using System;
-using System.Linq;
-using System.Windows.Forms;
-
 namespace SortingApp
 {
     public partial class Form1 : Form
@@ -210,10 +206,8 @@ namespace SortingApp
             int[] array = GetArrayFromInput();
             BubbleSort(array);
             DisplayArray(array);
-            label2.Text = "Posortowana tablica: [" + string.Join(", ", array) + "]";
         }
 
-        // Wywo³anie Quick Sort
         private void buttonQuickSort_Click(object sender, EventArgs e)
         {
             int[] array = GetArrayFromInput();
@@ -221,7 +215,6 @@ namespace SortingApp
             DisplayArray(array);
         }
 
-        // Wywo³anie Merge Sort
         private void buttonMergeSort_Click(object sender, EventArgs e)
         {
             int[] array = GetArrayFromInput();
@@ -229,7 +222,6 @@ namespace SortingApp
             DisplayArray(array);
         }
 
-        // Wywo³anie Insertion Sort
         private void buttonInsertionSort_Click(object sender, EventArgs e)
         {
             int[] array = GetArrayFromInput();
@@ -237,28 +229,18 @@ namespace SortingApp
             DisplayArray(array);
         }
 
-        // Wywo³anie Counting Sort
         private void buttonCountingSort_Click(object sender, EventArgs e)
         {
             int[] array = GetArrayFromInput();
-            CountingSort(array);
+            InsertionSort(array);
             DisplayArray(array);
         }
 
-        // Wywo³anie Selection Sort
         private void buttonSelectionSort_Click(object sender, EventArgs e)
         {
             int[] array = GetArrayFromInput();
             SelectionSort(array);
             DisplayArray(array);
-        }
-
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            string input = textBoxInput.Text;
-            string[] tokens = input.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
-            int[] array = tokens.Select(int.Parse).ToArray();
-            label1.Text = "Tablica: " + string.Join(", ", array);
         }
     }
 }
