@@ -36,6 +36,7 @@
             buttonInsertionSort = new Button();
             buttonCountingSort = new Button();
             buttonSelectionSort = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // buttonBubbleSort
@@ -114,11 +115,21 @@
             buttonSelectionSort.UseVisualStyleBackColor = true;
             buttonSelectionSort.Click += buttonSelectionSort_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 187);
+            label1.Name = "label1";
+            label1.Size = new Size(45, 20);
+            label1.TabIndex = 8;
+            label1.Text = "Time:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(buttonSelectionSort);
             Controls.Add(buttonCountingSort);
             Controls.Add(buttonInsertionSort);
@@ -143,5 +154,6 @@
         private Button buttonInsertionSort;
         private Button buttonCountingSort;
         private Button buttonSelectionSort;
+        private Label label1;
     }
 }

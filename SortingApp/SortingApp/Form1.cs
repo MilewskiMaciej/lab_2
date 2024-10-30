@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace SortingApp
 {
     public partial class Form1 : Form
@@ -27,6 +29,8 @@ namespace SortingApp
         // Bubble Sort
         private void BubbleSort(int[] array)
         {
+            Stopwatch time = new Stopwatch();
+            time.Start();
             for (int i = 0; i < array.Length - 1; i++)
             {
                 for (int j = 0; j < array.Length - i - 1; j++)
@@ -39,17 +43,22 @@ namespace SortingApp
                     }
                 }
             }
+            time.Stop();
+            label1.Text = "Time: " + time.ElapsedTicks;
         }
 
         // Quick Sort
         private void QuickSort(int[] array, int left, int right)
         {
+            Stopwatch time = new Stopwatch();
+            time.Start();
             if (left < right)
             {
                 int pivot = Partition(array, left, right);
                 QuickSort(array, left, pivot - 1);
                 QuickSort(array, pivot + 1, right);
             }
+            label1.Text = "Time: " + time.ElapsedTicks;
         }
 
         private int Partition(int[] array, int left, int right)
@@ -78,6 +87,8 @@ namespace SortingApp
         // Merge Sort
         private void MergeSort(int[] array, int left, int right)
         {
+            Stopwatch time = new Stopwatch();
+            time.Start();
             if (left < right)
             {
                 int middle = (left + right) / 2;
@@ -87,6 +98,7 @@ namespace SortingApp
 
                 Merge(array, left, middle, right);
             }
+            label1.Text = "Time: " + time.ElapsedTicks;
         }
 
         private void Merge(int[] array, int left, int middle, int right)
@@ -138,6 +150,8 @@ namespace SortingApp
         // Insertion Sort
         private void InsertionSort(int[] array)
         {
+            Stopwatch time = new Stopwatch();
+            time.Start();
             for (int i = 1; i < array.Length; i++)
             {
                 int key = array[i];
@@ -150,11 +164,14 @@ namespace SortingApp
                 }
                 array[j + 1] = key;
             }
+            label1.Text = "Time: " + time.ElapsedTicks;
         }
 
         // Counting Sort
         private void CountingSort(int[] array)
         {
+            Stopwatch time = new Stopwatch();
+            time.Start();
             int max = array.Max();
             int min = array.Min();
             int range = max - min + 1;
@@ -176,11 +193,14 @@ namespace SortingApp
 
             for (int i = 0; i < array.Length; i++)
                 array[i] = output[i];
+            label1.Text = "Time: " + time.ElapsedTicks;
         }
 
         // Selection Sort
         private void SelectionSort(int[] array)
         {
+            Stopwatch time = new Stopwatch();
+            time.Start();
             for (int i = 0; i < array.Length - 1; i++)
             {
                 int minIndex = i;
@@ -196,6 +216,7 @@ namespace SortingApp
                 array[minIndex] = array[i];
                 array[i] = temp;
             }
+            label1.Text = "Time: " + time.ElapsedTicks;
         }
 
         // Wywo³anie sortowania po klikniêciu przycisków
@@ -232,7 +253,7 @@ namespace SortingApp
         private void buttonCountingSort_Click(object sender, EventArgs e)
         {
             int[] array = GetArrayFromInput();
-            InsertionSort(array);
+            CountingSort(array);
             DisplayArray(array);
         }
 
